@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(to right, rgb(211, 7, 109), white , yellow );
+    
+  }
+  
+  
+  h1 {
+    color: rgb(0, 0, 0); /* Fixed missing property name */
+    font-size: 50px;
+    font-family: "Luckiest Guy",cursive;
+  
+  }
+
+  
+ 
+
+  h2{
+    margin-top: 2em;
+    text-align: center;
+    font-family:"Luckiest Guy", cursive ;
+  }
+  h2 span {
+    position: relative;
+    top:10px;
+    font-size: 80px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 4px 0 #ccc, 0 6px 0 transparent,0 7px 0 transparent,0 8px 0 transparent,0 9px 0 transparent,0 10px 0 rgba(0,0,0, 0.4);
+    animation: bounce 0.3s infinite alternate;
+  }
+
+  @keyframes bounce{
+    100% {
+      top:-20px;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 4px 0 #ccc, 0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 0 rgba(0,0,0, 0.2); ;
+    }
+  }
+  h2 span:nth-child(2) {
+    animation-delay:0.1s;
+  }
+  h2 span:nth-child(3) {
+    animation-delay:0.2s;
+  }
+  h2 span:nth-child(4) {
+    animation-delay:0.3s;
+  }
+  h2 span:nth-child(5) {
+    animation-delay:0.4s;
+  }
+  h2 span:nth-child(6) {
+    animation-delay:0.5s;
+  }
+  h2 span:nth-child(7) {
+    animation-delay:0.6s;
+  }
+  h2 span:nth-child(8) {
+    animation-delay:0.7s;
+  }
+  
+
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #a7de01;
+    border-radius: 5px;
+    transition: all ease 0.3s; /* Reduced transition time for smoother animation */
+    position: relative; /* Added for background animation */
+    overflow: hidden; /* Added for background animation */
+  }
+  
+  button:hover {
+    box-shadow: 5px 5px 0px 0px #000000;
+    transform: scale(1.1);
+  }
+  
+  /* Add emojis using the ::before pseudo-element */
+  button::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Emojis for the buttons */
+  button[data-move="Rock"]::before {
+    content: "🪨";
+  }
+  
+  button[data-move="Paper"]::before {
+    content: "📄";
+  }
+  
+  button[data-move="Scissors"]::before {
+    content: "✂️";
+  }
+  
+  /* Background animation for buttons */
+  button[data-move="Rock"]:before,
+  button[data-move="Paper"]:before,
+  button[data-move="Scissors"]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a7de01;
+    opacity: 0;
+    transition: opacity ease 0.3s;
+  }
+  
+  button[data-move="Rock"]:hover:before,
+  button[data-move="Paper"]:hover:before,
+  button[data-move="Scissors"]:hover:before {
+    opacity: 0.3;
+  }
+  
+  p{
+    font-size: 20px;
+    font-family: "Luckiest Guy",cursive;
+  
+  }
